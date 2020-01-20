@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="10">
+	<listeners>
+	<listener class-name="TestNG.Listeners"/> 
+	</listeners>
+
+  <parameter name="URL" value="www.google.com"/>
+  <parameter name="Username" value="sada"/>
+  <test  name="Regression">
+  <groups>
+  	<run>
+  	<exclude name="Sanity"/>
+  	</run>
+  </groups>
+  
+    <classes>
+       <class name="TestNG.Test1"/>
+       <class name="TestNG.Test2"/>
+       <class name="TestNG.Test3"/>
+    </classes>
+  </test> 
+</suite> 
